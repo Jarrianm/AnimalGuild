@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_02_11_201324) do
     t.string "experience"
     t.string "availability"
     t.string "contact_info"
+    t.string "species"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
