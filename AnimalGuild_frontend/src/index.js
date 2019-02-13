@@ -48,7 +48,7 @@ async function showSpecies(event){
 // console.log('clicked the thing',fun)
   animals.filter(animals => animals.species === animalSpecies)
   displayAnimals(filteredAnimals)
-})
+}
 
 // displayAnimals(filteredAnimals) {
 //
@@ -79,7 +79,7 @@ async function showSpecies(event){
   // else if(event.target.className === 'wookie'){
   //   showWookies(event)
   // }
-};
+
 
 // function
 
