@@ -14,6 +14,7 @@ jarrian = Animal.create(name:"jarrian",experience: "firebreathing", availability
 tara = Animal.create(name:"tara",experience: "howling", availability: "christmas", contact_info: "wolf@gmail.com", species:"wolf")
 simon = Animal.create(name:"simon",experience: "Nuts", availability: "abundant", contact_info: "squirell@gmail.com", species:"squirell")
 hanaa = Animal.create(name:"hanaa",experience: "saving the galaxy", availability: "on galactic patrol", contact_info: "wookie@gmail.com", species:"wookie")
+kris = Animal.create(name:"kris",experience: "barking", availability: "some", contact_info: "doggo2@gmail.com",species:"Dog")
 
 
 john = Client.create(name:"John")
