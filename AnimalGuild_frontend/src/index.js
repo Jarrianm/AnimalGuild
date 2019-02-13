@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", async () => {
  // let cars = ['benz','benz','ford','BMW']
  // let unqcars = _.uniq(cars)
  // console.log(unqcars)
-  let details = document.querySelector("#animal-info")
-  let ul = document.getElementById('animal-list')
+  window.details = document.querySelector("#animal-info")
+  let ul = document.getElementById('species-list')
   let sidebar = document.getElementById('side-bar')
 
   let animals = await fetchAnimals()
@@ -40,7 +40,8 @@ ul.addEventListener('click', showSpecies)
 
 };
 async function showSpecies(event){
-  console.log(event)
+  details.innerHTML = ''
+
   let animalSpecies = event.target.className
 // let fun = event.target.className
 // console.log('clicked the thing',fun)
@@ -49,22 +50,28 @@ async function showSpecies(event){
 }
 
 function eachAnimal(filteredAnimals) {
-filteredAnimals.forEach(displayAnimals)
+filteredAnimals.forEach(displayFilteredAnimals)
 };
 
-function displayAnimals(animal){
-  console.log(animal)
-  details.innerHMTL += `<div class='animal-card' id=${animal.id}>
-<img src=>
+function displayFilteredAnimals(animal){
+let animalCard = document.createElement("div")
+animalCard.setAttribute('class','animal-card')
+animalCard.setAttribute('class','polaroid')
 
+animalCard.setAttribute('id', `${animal.id}`)
+  animalCard.innerHTML =  `<div class='animal-card' id=${animal.id}>
+<img src="${animal.image}">
+<div class="container">
+<p>Name: ${animal.name}</p>
+<p>Experience: ${animal.experience}</p>
+<p>Availability: ${animal.availability}</p>
+<p>Contact Info: ${animal.contact_info}</p>
 
-
-
-
-
-  </div>
-  `
+</div>
+</div>`
+details.append(animalCard)
 };
+
 
 
 
