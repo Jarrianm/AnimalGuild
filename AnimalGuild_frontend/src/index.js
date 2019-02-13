@@ -4,55 +4,67 @@ document.addEventListener("DOMContentLoaded", async () => {
  // let cars = ['benz','benz','ford','BMW']
  // let unqcars = _.uniq(cars)
  // console.log(unqcars)
-
+  let details = document.querySelector("#animal-info")
   let ul = document.getElementById('animal-list')
-  let details = document.getElementById('animal-info')
   let sidebar = document.getElementById('side-bar')
 
   let animals = await fetchAnimals()
-  console.log(animals)
 
-  // fetchAnimals().then(getAllSpecies)
+
+  getAllSpecies(animals)
 
 async function fetchAnimals(){
   let res = await fetch('http://localhost:3000/api/v1/animals')
   let animals = await res.json()
   return animals
+
 };
 
 function getAllSpecies(animals){
+
   animals.forEach(displaySpecies)
 }
 
 function displaySpecies(animal){
+
   speciesButton = document.querySelector(`.${animal.species}`)
-  // console.log(speciesButton)
+
   if(speciesButton === null) {
     ul.innerHTML += `<br> <li id='species' class="list">
   <button class="${animal.species}"type='button'id=${animal.species}>${animal.species}</button>
   </li>
   `
-  }
 
-
-
-let li = document.getElementById(`species`)
-console.log(li)
+}
 ul.addEventListener('click', showSpecies)
-
 
 };
 async function showSpecies(event){
+  console.log(event)
   let animalSpecies = event.target.className
 // let fun = event.target.className
 // console.log('clicked the thing',fun)
-  animals.filter(animals => animals.species === animalSpecies)
-  displayAnimals(filteredAnimals)
+  let filteredAnimals = animals.filter(animals => animals.species === animalSpecies)
+  eachAnimal(filteredAnimals)
 }
 
-// displayAnimals(filteredAnimals) {
-//
-// }
+function eachAnimal(filteredAnimals) {
+filteredAnimals.forEach(displayAnimals)
+};
+
+function displayAnimals(animal){
+  console.log(animal)
+  details.innerHMTL += `<div class='animal-card' id=${animal.id}>
+<img src=>
+
+
+
+
+
+
+  </div>
+  `
+};
 
 
 
@@ -144,37 +156,37 @@ async function showSpecies(event){
 //
 // };
 
+//
+// function getDetails(){
+// return fetch('http://localhost:3000/api/v1/animals')
+// .then(res => res.json())
+//
 
-function getDetails(){
-return fetch('http://localhost:3000/api/v1/animals')
-.then(res => res.json())
-
-};
-
-function filterAnimals(animals, event){
-// console.log(animals.filter(animals => animals.species ==="Dog"))
-
-
-
-// else if(animals.filter(animals => animals.species ==="Cat")){
-// // showCats()
-// }
-// else if(animals.filter(animals => animals.species ==="bear")){
-// // showBears()
-// }
-// else if(animals.filter(animals => animals.species ==="dragon")){
-// // showDragons()
-// }
-// else if(animals.filter(animals => animals.species ==="wolf")){
-// // showWolves()
-// }
-// else if(animals.filter(animals => animals.species ==="squirell")){
-//   // showSquirells()
-// }
-// else if(animals.filter(animals => animals.species === "wookie")){
-//   // showWookies()
-// }
-};
+//
+// function filterAnimals(animals, event){
+// // console.log(animals.filter(animals => animals.species ==="Dog"))
+//
+//
+//
+// // else if(animals.filter(animals => animals.species ==="Cat")){
+// // // showCats()
+// // }
+// // else if(animals.filter(animals => animals.species ==="bear")){
+// // // showBears()
+// // }
+// // else if(animals.filter(animals => animals.species ==="dragon")){
+// // // showDragons()
+// // }
+// // else if(animals.filter(animals => animals.species ==="wolf")){
+// // // showWolves()
+// // }
+// // else if(animals.filter(animals => animals.species ==="squirell")){
+// //   // showSquirells()
+// // }
+// // else if(animals.filter(animals => animals.species === "wookie")){
+// //   // showWookies()
+// // }
+// };
 
 
 
