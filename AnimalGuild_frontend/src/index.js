@@ -30,10 +30,12 @@ function displaySpecies(animal){
   speciesButton = document.querySelector(`.${animal.species}`)
 
   if(speciesButton === null) {
-    ul.innerHTML += `<br> <li id='species' class="list">
-  <button class="${animal.species}"type='button'id=${animal.species}>${animal.species}</button>
-  </li>
-  `
+    ul.innerHTML +=
+
+ `<br> <li id='species' class="list">
+   <a class="${animal.species}"type='button'id=${animal.species}>${animal.species}</a> </li>
+ `
+
 
 }
 ul.addEventListener('click', showSpecies)
