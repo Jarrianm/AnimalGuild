@@ -32,7 +32,7 @@ function displaySpecies(animal){
   if(speciesButton === null) {
     ul.innerHTML +=
 
- `<br> <li id='species' class="list">
+ ` <br> <li id='species' class="list">
    <a class="${animal.species}"id=${animal.species}>${animal.species}</a> </li>
  `
 

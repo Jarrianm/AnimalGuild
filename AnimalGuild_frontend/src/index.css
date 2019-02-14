@@ -11,9 +11,13 @@
 
 .center{
   display: block;
-  margin-left: 40%;
+  margin-left: 30%;
   margin-right: auto;
   width: 60%;
+  bottom: 0;
+  top: 0;
+  padding: 0;
+  margin-top: 5%;
 }
 
 div.polaroid {
@@ -21,8 +25,13 @@ div.polaroid {
   top: 10%;,
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 40px 0 rgba(0, 0, 0, 0.19);
+  height: 85%;
 
   margin-bottom: 10%;
+
+}
+div.polaroid:hover{
+  padding:6px;
 
 }
 
@@ -36,24 +45,54 @@ display: block;,
 }
 
 img{
-  width: 90%;,
+  width: 100%;
 
 }
 
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #f1f1f1;
+  overflow: hidden;
+  width:100%;
+  left: 0px ;
+  position: fixed;
+  top:0
+}
 
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #60B4BD;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+/* .topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+} */
 
 
 div.sidenav {
   list-style-type: block;
   margin: 0;
   padding: 0;
-  width: 25%;
+  width: 20%;
   background-color: #f1f1f1;
   position: fixed;
-  height: 100%;
+  height: 93.2%;
   overflow: auto;
-  top:0;
+  left:0;
   bottom:0;
 }
 
@@ -70,7 +109,7 @@ div.sidenav li a {
 }
 
 div.sidenav li a:hover:not(.active) {
-  background-color: #555;
+  background-color: #60B4BD;
   color: white;
 }
 
