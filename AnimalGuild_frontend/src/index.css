@@ -45,7 +45,7 @@ img{
 
 
 div.sidenav {
-  list-style-type: none;
+  list-style-type: block;
   margin: 0;
   padding: 0;
   width: 25%;
@@ -53,6 +53,8 @@ div.sidenav {
   position: fixed;
   height: 100%;
   overflow: auto;
+  top:0;
+  bottom:0;
 }
 
 div.sidenav li a {
@@ -62,9 +64,9 @@ div.sidenav li a {
   text-decoration: none;
 }
 
-div.sidenav li a.active {
+ div.sidenav li a.active {
   background-color: #4CAF50;
-  color: white;
+  /* color: white; */
 }
 
 div.sidenav li a:hover:not(.active) {
@@ -72,13 +74,16 @@ div.sidenav li a:hover:not(.active) {
   color: white;
 }
 
-
+ul{
+  padding:0;
+}
 
 @media screen and (max-width: 900px) {
   ul.sidenav {
     width: 100%;
     height: auto;
     position: relative;
+
   }
 
   div.sidenav li a {

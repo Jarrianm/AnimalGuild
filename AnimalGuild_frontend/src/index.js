@@ -33,7 +33,7 @@ function displaySpecies(animal){
     ul.innerHTML +=
 
  `<br> <li id='species' class="list">
-   <a class="${animal.species}"type='button'id=${animal.species}>${animal.species}</a> </li>
+   <a class="${animal.species}"id=${animal.species}>${animal.species}</a> </li>
  `
 
 
@@ -42,6 +42,8 @@ ul.addEventListener('click', showSpecies)
 
 };
 async function showSpecies(event){
+event.preventDefault()
+
   details.innerHTML = ''
 
   let animalSpecies = event.target.className
