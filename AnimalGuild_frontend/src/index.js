@@ -4,9 +4,10 @@ document.addEventListener("DOMContentLoaded", async () => {
  // let cars = ['benz','benz','ford','BMW']
  // let unqcars = _.uniq(cars)
  // console.log(unqcars)
-  window.details = document.querySelector("#animal-info")
+  let details = document.querySelector("#animal-info")
   let ul = document.getElementById('species-list')
   let sidebar = document.getElementById('side-bar')
+  let bookingsBtn = document.querySelector('.Booking')
 
   let animals = await fetchAnimals()
 
@@ -74,9 +75,36 @@ animalCard.setAttribute('id', `${animal.id}`)
 </div>
 </div>`
 details.append(animalCard)
+
+details.addEventListener('click',bookThePup)
+
+
+};
+
+bookingsBtn.addEventListener('click',viewBookings)
+
+function viewBookings(event){
+  console.log("event to view bookings",event)
+
+fetch('http://localhost:3000/api/v1/bookings')
+.then(res => res.json())
+.then(bookings => bookings.forEach(showBooking))
+}
+
+function showBooking(booking){
+debugger;
+  console.log(booking)
 };
 
 
+
+
+
+
+function bookThePup(event){
+  console.log(event)
+
+};
 
 
 // function filter()
