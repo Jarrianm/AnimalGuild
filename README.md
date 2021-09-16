@@ -10,7 +10,6 @@ It’s difficult for even A-list actors to land the role they want, amateur acto
 This application was built for casting directors or even film students to find and cast Animal actors in their films or personal projects. 
 
 
-(Gif)
 
 # Technologies Used
 Vanilla JS 
