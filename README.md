@@ -1,24 +1,27 @@
-# README
+# Animal Guild
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+(Photo)
 
-* Ruby version
+# Motivation: 
 
-* System dependencies
+It’s difficult for even A-list actors to land the role they want, amateur actors even more so. But with all that being said people seem to forget that there is a market for all of our furry friends to be on the big screen too. 
 
-* Configuration
+This application was built for casting directors or even film students to find and cast Animal actors in their films or personal projects. 
 
-* Database creation
 
-* Database initialization
+(Gif)
 
-* How to run the test suite
+# Technologies Used
+Vanilla JS 
+CSS
+Rails
+Active Record 
+PostgreSQL
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ..
+# Getting Started :
+1. Fork and clone 
+2. Navigate to the db directory and run 
+  `rails s` 
+4. Navigate to front-end directory and run 
+  `open index.html`
