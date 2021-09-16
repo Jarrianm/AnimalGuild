@@ -1,7 +1,7 @@
 # Animal Guild
 
+<img width="652" alt="AnimalGuild" src="https://user-images.githubusercontent.com/42524503/133537365-ae9b25f5-3e26-4d94-892f-02bb34515a20.png">
 
-(Photo)
 
 # Motivation: 
 
